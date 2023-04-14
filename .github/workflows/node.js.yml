@@ -43,7 +43,7 @@ jobs:
           host: ${{ secrets.DEPLOY_SERVER_IP }}
           username: ${{ secrets.DEPLOY_SERVER_USERNAME }}
           key: ${{ secrets.DEPLOY_SERVER_SSH_KEY }}
-          scripts: |
+          script: |
             mkdir -p /home/ubuntu/deploy/${{ github.run_id }}
             cd /home/ubuntu/deploy/${{ github.run_id }} && git clone https://github.com/Biestina/ci-cd-demo
             cd /home/ubuntu/deploy/${{ github.run_id }}/ci-cd-demo && docker build . -t Biestina/ci-cd-demo:${{ github.run_id }}
