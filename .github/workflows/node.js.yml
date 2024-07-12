@@ -5,8 +5,8 @@ name: My first CICD workflow
 
 on:
   workflow_dispatch:
-#  push:
-#    branches: [ "master" ]
+  push:
+    branches: [ "master" ]
 #  pull_request:
 #    branches: [ "master" ]
 
